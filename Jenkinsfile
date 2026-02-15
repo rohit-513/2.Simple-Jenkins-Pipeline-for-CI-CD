@@ -5,21 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building the application..."
-                sh 'docker build -t simple-app .'
+                bat 'echo Build step running on Windows'
             }
         }
 
         stage('Test') {
             steps {
                 echo "Running tests..."
-                sh 'echo "No tests added yet"'
+                bat 'echo Test step running on Windows'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying the application..."
-                sh 'docker run -d -p 8080:80 simple-app'
+                echo "Deploying application..."
+                bat 'echo Deployment step running on Windows'
             }
         }
     }
